@@ -38,8 +38,10 @@ document.getElementById('registerForm').addEventListener('submit', function(even
   event.preventDefault();
   const registerData = {
     username: this[0].value,
-    password: this[1].value,
-    email: this[2].value
+    email: this[1].value,
+    phone: this[2].value,
+    password: this[3].value,
+    repassword: this[4].value
   };
   console.log('Данные регистрации:', registerData);
   this.reset();
