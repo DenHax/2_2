@@ -13,32 +13,64 @@
   <div id="registerModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeRegister">&times;</span>
-      <h2>Регистрация</h2>
+      <div class="auth-context">
+        <b class="context-main">Регистрация</b>
+        <b class="context-sub"><a href="#" id="toLogin">Авторизация</a></b>
+      </div>
       <form id="registerForm">
-        <input type="text" id="registerUsername" placeholder="Имя" required>
-        <input type="text" id="registeEmail" placeholder="Email" required>
-        <input type="text" id="registerPhone" placeholder="Телефон" required>
-        <input type="password" id="registerPassword" placeholder="Пароль" required>
-        <input type="password" id="registerRetypePassword" placeholder="Повторите пароль" required>
-        <label>
-          <input type="checkbox" id="dataProcessingConsent"> Я согласен на обработку персональных данных
+        <div class="form-inputs">
+          <div class="auth-input">
+            <input type="text" id="registerUsername" placeholder=" " required>
+            <label for="registerUsername">Имя</label>
+          </div>
+          <div class="custom-form-container">
+            <div class="auth-input">
+              <input type="text" id="registeEmail" placeholder=" " required>
+              <label for="registeEmail">Email</label>
+            </div>
+            <div class="auth-input">
+              <input type="text" id="registerPhone" placeholder=" " required>
+              <label for="registerPhone">Телефон</label>
+            </div>
+            <div class="auth-input">
+              <input type="password" id="registerPassword" placeholder=" " required>
+              <label for="registerPassword">Пароль</label>
+            </div>
+            <div class="auth-input">
+              <input type="password" id="registerRetypePassword" placeholder=" " required>
+              <label for="registerRetypePassword">Повторите пароль</label>
+            </div>
+          </div>
+        </div>
+        <label class="data-proc-box">
+          <input type="checkbox" id="dataProcessingConsent" required> Я согласен на обработку персональных данных
         </label>
         <button type="submit">Зарегистрироваться</button>
       </form>
-      <p>Уже есть аккаунт? <a href="#" id="toLogin">Войти</a></p>
     </div>
   </div>
 
   <div id="loginModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeLogin">&times;</span>
-      <h2>Вход</h2>
+      <div class="auth-context">
+        <b class="context-sub"><a href="#" id="toRegister">Регистрация</a></b>
+        <b class="context-main">Авторизация</b>
+      </div>
       <form id="loginForm">
-        <input type="text" id="loginUsername" placeholder="Логин" required>
-        <input type="password" id="loginPassword" placeholder="Пароль" required>
+        <div class="form-inputs">
+          <div class="auth-input">
+            <input type="text" id="loginUsername" placeholder=" " required>
+            <label for="loginUsername">Логин</label>
+          </div>
+
+          <div class="auth-input">
+            <input type="password" id="loginPassword" placeholder=" " required>
+            <label for="loginPassword">Пароль</label>
+          </div>
+        </div>
         <button type="submit">Войти</button>
       </form>
-      <p>Нет аккаунта? <a href="#" id="toRegister">Зарегистрироваться</a></p>
     </div>
   </div>
 
@@ -47,7 +79,7 @@
       <div class="logo-img">
         <img src="assets/Rectangle.svg" />
       </div>
-      <p>Сайт с обзорами</p>
+      <p>Сайт с обзорами фильмов</p>
     </div>
     <div class="auth-container">
       <button id="register-btn">Регистрация</button>
