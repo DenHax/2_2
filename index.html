@@ -10,6 +10,38 @@
 
 <body>
 
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeRegister">&times;</span>
+      <h2>Регистрация</h2>
+      <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Имя" required>
+        <input type="text" id="registeEmail" placeholder="Email" required>
+        <input type="text" id="registerPhone" placeholder="Телефон" required>
+        <input type="password" id="registerPassword" placeholder="Пароль" required>
+        <input type="password" id="registerRetypePassword" placeholder="Повторите пароль" required>
+        <label>
+          <input type="checkbox" id="dataProcessingConsent"> Я согласен на обработку персональных данных
+        </label>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+      <p>Уже есть аккаунт? <a href="#" id="toLogin">Войти</a></p>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeLogin">&times;</span>
+      <h2>Вход</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Логин" required>
+        <input type="password" id="loginPassword" placeholder="Пароль" required>
+        <button type="submit">Войти</button>
+      </form>
+      <p>Нет аккаунта? <a href="#" id="toRegister">Зарегистрироваться</a></p>
+    </div>
+  </div>
+
   <header>
     <div class="logo-container">
       <div class="logo-img">
@@ -22,33 +54,6 @@
       <button id="login-btn">Вход</button>
     </div>
 
-    <div id="registerModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeRegister">&times;</span>
-        <h2>Регистрация</h2>
-        <input type="text" id="registerUsername" placeholder="Имя" required>
-        <input type="text" id="registeEmail" placeholder="Email" required>
-        <input type="text" id="registerPhone" placeholder="Телефон" required>
-        <input type="password" id="registerPassword" placeholder="Пароль" required>
-        <input type="password" id="registerRetypePassword" placeholder="Повторите пароль" required>
-        <label>
-          <input type="checkbox" id="dataProcessingConsent"> Я согласен на обработку персональных данных
-        </label>
-        <button id="registerSubmit">Зарегистрироваться</button>
-        <p>Уже есть аккаунт? <a href="#" id="toLogin">Войти</a></p>
-      </div>
-    </div>
-
-    <div id="loginModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeLogin">&times;</span>
-        <h2>Вход</h2>
-        <input type="text" id="loginUsername" placeholder="Логин" required>
-        <input type="password" id="loginPassword" placeholder="Пароль" required>
-        <button id="loginSubmit">Войти</button>
-        <p>Нет аккаунта? <a href="#" id="toRegistry">Зарегистрироваться</a></p>
-      </div>
-    </div>
 
   </header>
 
