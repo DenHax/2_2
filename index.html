@@ -12,7 +12,7 @@
 
   <div id="registerModal" class="modal">
     <div class="modal-content">
-      <span class="close" id="closeRegister">&times;</span>
+      <span class="close" id="closeRegister"><img src="assets/close.svg" alt="×" /></span>
       <div class="auth-context">
         <b class="context-main">Регистрация</b>
         <b class="context-sub"><a href="#" id="toLogin">Авторизация</a></b>
@@ -43,16 +43,21 @@
           </div>
         </div>
         <label class="data-proc-box">
-          <input type="checkbox" id="dataProcessingConsent" required> Я согласен на обработку персональных данных
+          <input type="checkbox" required>
+          <span id="dataProcessingConsent">✓</span>
+          <p>Согласен на обработку <span>персональных данных</span></p>
         </label>
         <button type="submit">Зарегистрироваться</button>
       </form>
+      <div class="all-fields-req"><img src="assets/info.png" alt="info-logo" />
+        <p>Все поля обязательны для заполнения</p>
+      </div>
     </div>
   </div>
 
   <div id="loginModal" class="modal">
     <div class="modal-content">
-      <span class="close" id="closeLogin">&times;</span>
+      <span class="close" id="closeLogin"><img src="assets/close.svg" alt="×" /></span>
       <div class="auth-context">
         <b class="context-sub"><a href="#" id="toRegister">Регистрация</a></b>
         <b class="context-main">Авторизация</b>
@@ -71,6 +76,9 @@
         </div>
         <button type="submit">Войти</button>
       </form>
+      <div class="all-fields-req"><img src="assets/info.png" alt="info-logo" />
+        <p>Все поля обязательны для заполнения</p>
+      </div>
     </div>
   </div>
 
