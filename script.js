@@ -70,6 +70,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     password: this[1].value
   };
   console.log('Данные входа:', loginData);
-  this.reset(); // Сбрасываем форму
+  this.reset();
   document.getElementById('loginModal').style.display = 'none';
 });

@@ -118,11 +118,8 @@ header {
 .modal-content {
   background: #FFFFFF;
   margin: 15% auto;
-  /*padding: 20px;*/
-  /*border: 1px solid #888;*/
   width: 600px;
   border-radius: 20px;
-  /*opacity: 0px;*/
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -267,7 +264,7 @@ input[type="checkbox"]:checked+#dataProcessingConsent {
   opacity: 0px;
   box-sizing: border-box;
   transition: border-color 0.3s;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #registerUsername {
@@ -284,8 +281,8 @@ input[type="checkbox"]:checked+#dataProcessingConsent {
 
 .auth-input label {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 7px;
+  top: 5px;
   color: #B9B9B9;
   transition: 0.2s;
   pointer-events: none;
