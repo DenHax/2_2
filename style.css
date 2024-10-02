@@ -319,7 +319,7 @@ main {}
 .add-review-btn {
   width: 199px;
   height: 60px;
-  /*padding: 20px;*/
+  cursor: pointer;
   gap: 10px;
   border-radius: 10px;
   opacity: 0px;
@@ -329,7 +329,6 @@ main {}
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
-  /*text-align: right;*/
 
   color: #FFFFFF;
 }
