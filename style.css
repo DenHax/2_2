@@ -118,11 +118,11 @@ header {
 .modal-content {
   background: #FFFFFF;
   margin: 15% auto;
-  padding: 20px;
+  /*padding: 20px;*/
   /*border: 1px solid #888;*/
   width: 600px;
   border-radius: 20px;
-  opacity: 0px;
+  /*opacity: 0px;*/
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -135,6 +135,7 @@ header {
   cursor: pointer;
   width: 20px;
   height: 20px;
+  margin-right: 20px;
 }
 
 #registerModal>.modal-content {
@@ -169,6 +170,8 @@ header {
 .modal-content form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -194,11 +197,40 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  gap: 7px;
+  font-size: 16px;
+}
+
+.data-proc-box span {
+  color: orange;
+}
+
+input[type="checkbox"] {
+  display: none;
 }
 
 #dataProcessingConsent {
+  display: inline-block;
   height: 14px;
   width: 14px;
+  border: 2px solid #B9B9B9;
+  background: transparent;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  line-height: 14px;
+  color: transparent;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+
+  font-size: 17px;
+}
+
+input[type="checkbox"]:checked+#dataProcessingConsent {
+  background: #FF9C07;
+  border-color: #FF9C07;
+  color: #FFFFFF;
 }
 
 #loginForm .form-inputs {
@@ -229,7 +261,7 @@ header {
 .auth-input input {
   width: Fixed (250px)px;
   height: 60px;
-  padding: 28px 20px 12px 20px;
+  /*padding: 28px 20px 12px 20px;*/
   gap: 10px;
   border-radius: 10px;
   opacity: 0px;
@@ -263,6 +295,19 @@ header {
 .auth-input input:focus+label {
   font-size: 10px;
   color: #FF9C07;
+}
+
+.all-fields-req {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #838383;
+}
+
+.all-fields-req p {
+  font-size: 20px;
 }
 
 main {}
