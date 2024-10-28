@@ -2,43 +2,96 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Обзоры фильмов Онлайн</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="null.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
-
   <div id="registerModal" class="modal">
     <div class="modal-content">
-      <span class="close" id="closeRegister">&times;</span>
-      <h2>Регистрация</h2>
+      <span class="close" id="closeRegister"><img src="assets/close.svg" alt="×" /></span>
+      <div class="auth-context">
+        <b class="context-main">Регистрация</b>
+        <b class="context-sub"><a href="#" id="toLogin">Авторизация</a></b>
+      </div>
       <form id="registerForm">
-        <input type="text" id="registerUsername" placeholder="Имя" required>
-        <input type="text" id="registeEmail" placeholder="Email" required>
-        <input type="text" id="registerPhone" placeholder="Телефон" required>
-        <input type="password" id="registerPassword" placeholder="Пароль" required>
-        <input type="password" id="registerRetypePassword" placeholder="Повторите пароль" required>
-        <label>
-          <input type="checkbox" id="dataProcessingConsent"> Я согласен на обработку персональных данных
+        <div class="form-inputs">
+          <div class="auth-input">
+            <input type="text" id="registerUsername" placeholder=" " required />
+            <label for="registerUsername">Имя</label>
+          </div>
+          <div class="custom-form-container">
+            <div class="auth-input">
+              <input type="text" id="registeEmail" placeholder=" " required />
+              <label for="registeEmail">Email</label>
+            </div>
+            <div class="auth-input">
+              <input type="number" id="registerPhone" placeholder=" " required />
+              <label for="registerPhone">Мобильный телефон</label>
+            </div>
+            <div class="auth-input">
+              <input type="password" id="registerPassword" placeholder=" " required />
+              <label for="registerPassword">Пароль</label>
+            </div>
+            <div class="auth-input">
+              <input type="password" id="registerRetypePassword" placeholder=" " required />
+              <label for="registerRetypePassword">Повторите пароль</label>
+            </div>
+          </div>
+        </div>
+        <label class="data-proc-box">
+          <input type="checkbox" required />
+          <span id="dataProcessingConsent">✓</span>
+          <p>
+            Согласен на обработку
+            <span>персональных данных</span>
+          </p>
         </label>
+
         <button type="submit">Зарегистрироваться</button>
       </form>
-      <p>Уже есть аккаунт? <a href="#" id="toLogin">Войти</a></p>
+      <div class="all-fields-req">
+        <img src="assets/info.png" alt="info-logo" />
+        <p>Все поля обязательны для заполнения</p>
+      </div>
     </div>
   </div>
 
   <div id="loginModal" class="modal">
     <div class="modal-content">
-      <span class="close" id="closeLogin">&times;</span>
-      <h2>Вход</h2>
-      <form id="loginForm">
-        <input type="text" id="loginUsername" placeholder="Логин" required>
-        <input type="password" id="loginPassword" placeholder="Пароль" required>
-        <button type="submit">Войти</button>
-      </form>
-      <p>Нет аккаунта? <a href="#" id="toRegister">Зарегистрироваться</a></p>
+      <div class="modal-data">
+        <span class="close" id="closeLogin"><img src="assets/close.svg" alt="×" /></span>
+        <div class="auth-context">
+          <b class="context-sub"><a href="#" id="toRegister">Регистрация</a></b>
+          <b class="context-main">Авторизация</b>
+        </div>
+        <form id="loginForm">
+          <div class="form-inputs">
+            <div class="auth-input">
+              <input type="text" id="loginUsername" placeholder=" " required />
+              <label for="loginUsername">Логин</label>
+            </div>
+
+            <div class="auth-input">
+              <input type="password" id="loginPassword" placeholder=" " required />
+              <label for="loginPassword">Пароль</label>
+            </div>
+          </div>
+          <button type="submit">Войти</button>
+        </form>
+        <div class="all-fields-req">
+          <img src="assets/info.png" alt="info-logo" />
+          <p>Все поля обязательны для заполнения</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -47,27 +100,40 @@
       <div class="logo-img">
         <img src="assets/Rectangle.svg" />
       </div>
-      <p>Сайт с обзорами</p>
+      <p class="logo-text">Сайт с обзорами фильмов</p>
     </div>
     <div class="auth-container">
+      <!--<div class="logo-img">-->
+      <!--  <img src="assets/Rectangle.svg" />-->
+      <!--</div>-->
       <button id="register-btn">Регистрация</button>
       <button id="login-btn">Вход</button>
     </div>
-
-
   </header>
 
   <main>
     <div class="nav-container">
       <h2>Топ 20 фильмов</h2>
-      <button class="add-review-btn"><span class="plus-sym">+</span> Добавить обзор</button>
+      <button class="add-review-btn">
+        <img class="plus-sym" src="assets/+.svg" alt="+">
+        <p class="add-review-text">Добавить обзор</p>
+      </button>
     </div>
     <div class="films-review-container">
       <div class="film-review">
-        <img src="assets/mile.png" />
+        <div class="film-image">
+          <img src="assets/mile.png" />
+        </div>
         <div class="review-text-container">
-          <h3>Зеленая миля (1999)</h3>
-          <p class="review-date">Добавлено 15 августа</p>
+          <h3>
+            Зеленая миля <br />
+            (1999)
+          </h3>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
         </div>
         <div class="review-more-btn">
           <p>Подробнее</p>
@@ -75,10 +141,129 @@
       </div>
 
       <div class="film-review">
-        <img src="assets/shindler.png" />
+        <div class="film-image">
+          <img src="assets/shindler.png" />
+        </div>
         <div class="review-text-container">
           <h3>Список Шиндлера (1993)</h3>
-          <p class="review-date">Добавлено 15 августа</p>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
+        </div>
+        <div class="review-more-btn">
+          <p>Подробнее</p>
+        </div>
+      </div>
+
+      <div class="film-review">
+        <div class="film-image">
+          <img src="assets/img-1.png" />
+        </div>
+        <div class="review-text-container">
+          <h3>Властелин колец: Две крепости (2002)</h3>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
+        </div>
+        <div class="review-more-btn">
+          <p>Подробнее</p>
+        </div>
+      </div>
+      <div class="film-review">
+        <div class="film-image">
+          <img src="assets/img-2.png" />
+        </div>
+        <div class="review-text-container">
+          <h3>Побег из Шоушенка (1994)</h3>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
+        </div>
+        <div class="review-more-btn">
+          <p>Подробнее</p>
+        </div>
+      </div>
+      <div class="film-review">
+        <div class="film-image">
+          <img src="assets/img-3.png" />
+        </div>
+        <div class="review-text-container">
+          <h3>1+1 (2011)</h3>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
+        </div>
+        <div class="review-more-btn">
+          <p>Подробнее</p>
+        </div>
+      </div>
+      <div class="film-review">
+        <div class="film-image">
+          <img src="assets/img-4.png" />
+        </div>
+        <div class="review-text-container">
+          <h3>Форрест Гамп (1994)</h3>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
+        </div>
+        <div class="review-more-btn">
+          <p>Подробнее</p>
+        </div>
+      </div>
+      <div class="film-review">
+        <div class="film-image">
+          <img src="assets/img-5.png" />
+        </div>
+        <div class="review-text-container">
+          <h3>Интерстеллар (2014)</h3>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
+        </div>
+        <div class="review-more-btn">
+          <p>Подробнее</p>
+        </div>
+      </div>
+      <div class="film-review">
+        <div class="film-image">
+          <img src="assets/img-6.png" />
+        </div>
+        <div class="review-text-container">
+          <h3>Властелин колец (2003)</h3>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
+        </div>
+        <div class="review-more-btn">
+          <p>Подробнее</p>
+        </div>
+      </div>
+      <div class="film-review">
+        <div class="film-image">
+          <img src="assets/img-7.png" />
+        </div>
+        <div class="review-text-container">
+          <h3>Тайна Коко (2017)</h3>
+          <div class="review-date">
+            <img class="review-added-image" src="assets/clock.svg" alt="⏲" />
+            <p class="review-added-label">Добавлено</p>
+            <p>15 августа</p>
+          </div>
         </div>
         <div class="review-more-btn">
           <p>Подробнее</p>
@@ -87,7 +272,7 @@
     </div>
     <div class="show-more">
       <img src="assets/show-more.svg" />
-      <p>Посмотреть еще</p>
+      <p>Посмотреть ещё</p>
     </div>
   </main>
 
