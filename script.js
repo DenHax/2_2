@@ -1,3 +1,18 @@
+
+const forms = document.querySelectorAll('form')
+forms.forEach(form => {
+  const inputs = form.querySelectorAll('input');
+  inputs.forEach(input => {
+    input.addEventListener('input', function() {
+      if (this.value) {
+        this.style.borderColor = '#FF9C07';
+      } else {
+        this.style.borderColor = '#B9B9B9';
+      }
+    });
+  });
+});
+
 document.querySelector('#login-btn').onclick = function() {
   document.querySelector('#loginModal').style.display = 'block';
 }
@@ -55,6 +70,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     password: this[1].value
   };
   console.log('Данные входа:', loginData);
-  this.reset(); // Сбрасываем форму
+  this.reset();
   document.getElementById('loginModal').style.display = 'none';
 });
